@@ -9,7 +9,7 @@ import pumas_unam from '../assets/pumas_unam.png';
 
  const pictures = [
     {
-      id: 'atlas',
+      id: 'Atlas',
       photo: atlas,
     },
     {

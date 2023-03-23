@@ -7,37 +7,41 @@ import pictures from './data/picturesData';
 
 const gamesData = data.games;
 
-const firstGame = gamesData[0];
-const homeTeamName = firstGame.homeName;
-const awayTeamName = firstGame.awayName;
-let homeTeamImg;
-let awayTeamImg;
-
-pictures.map((picture)=>{
-  if(picture.id === homeTeamName){
-    homeTeamImg = picture.photo;
-  }
-  else if(picture.id === awayTeamName){
-    awayTeamImg = picture.photo;
-  }
-})
-const gameData = {data:firstGame, homeImg:homeTeamImg, awayImg:awayTeamImg};
+const getGameDataByID = (index) =>{
+  const firstGame = gamesData[index];
+  const homeTeamName = firstGame.homeName;
+  const awayTeamName = firstGame.awayName;
+  let homeTeamImg;
+  let awayTeamImg;
+  
+  pictures.forEach((picture)=>{
+    if(picture.id === homeTeamName){
+      homeTeamImg = picture.photo;
+    }
+    else if(picture.id === awayTeamName){
+      awayTeamImg = picture.photo;
+    }
+  })
+  const gameData = {data:firstGame, homeImg:homeTeamImg, awayImg:awayTeamImg};
+  
+  return gameData;
+} 
 
 function App() {
-  const [currGameNumber, setCurrGameNumber] = useState(0);
-  const [currGameData, setCurrGameData] = useState(gameData);
 
-  // useEffect(()=> {
-  
-  //     setCurrGameData(gameData); 
-  //     console.log(gameData);
-  // },[]);
+  const [currGameNumber, setCurrGameNumber] = useState(0);
+  const [currGameData, setCurrGameData] = useState(getGameDataByID(0));
+
+  useEffect(()=> {
+    setCurrGameData(getGameDataByID(currGameNumber));
+    //add to localStorage 
+  },[currGameNumber]);
 
   return (
     <div className="App">
       <MainMatch info={currGameData} />
       <div className='button-section'>
-      <BettingButtons bettingStats={currGameData.data} />
+      <BettingButtons bettingStats={currGameData.data} swapGame={setCurrGameNumber} currGameNumber={currGameNumber}/>
 
       </div>
     </div>
