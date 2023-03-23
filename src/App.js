@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import desktop from "./assets/desktop.png";
+import BettingButtons from "./components/BettingButtons/BettingButtons"
+import MainMatch from './components/MainMatch/MainMatch';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MainMatch/>
+      <div className='button-section'>
+        <BettingButtons/>
+
+      </div>
     </div>
   );
 }

@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 18rem;
+  }
+  
+  .img-container1 {
+    margin: 0 20px;
+  }
+  
+  img {
+    height: 200px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    
+    .img-container2 {
+      margin: 20px 0;
+    }
+  }
+  
