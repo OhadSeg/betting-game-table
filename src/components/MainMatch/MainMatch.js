@@ -1,18 +1,16 @@
 import React from "react";
 import "./MainMatch.css";
-import homeTeam from "../../assets/america.png";
-import awayTeam from "../../assets/atlas.png";
 import MatchDetails from "../MatchDetails/MatchDetails";
 
-function MainMatch() {
+function MainMatch(props) {
   return (
     <div className="container">
       <div className="img-container1">
-        <img src={homeTeam} alt="homeTeam" />
+        <img src={props.info.homeImg} alt="homeTeam" />
       </div>
-      <MatchDetails />
+      <MatchDetails homeTeamName={props.info.data.homeName} awayTeamName={props.info.data.awayName} />
       <div className="img-container2">
-        <img src={awayTeam} alt="awayTeam" />
+        <img src={props.info.awayImg} alt="awayTeam" />
       </div>
     </div>
   );

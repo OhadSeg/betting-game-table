@@ -3,7 +3,10 @@ import "./BettingButton.css";
 
 function BettingButton(props) {
   return (
-    <button className="betting-button">{props.text}</button>
+    <button className="betting-button">
+        <span>{props.team}</span>
+        <span>{props.odds}</span>
+    </button>
   );
 }
 

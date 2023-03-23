@@ -1,12 +1,12 @@
 import React from "react";
 import "./MatchDetails.css";
 
-function MatchDetails() {  
+function MatchDetails(props) {  
     return (
       <div className="main">
-      <h1>Home Team</h1>
+      <h1>{props.homeTeamName}</h1>
       <h1 style={{color:"green"}}>VS</h1>
-      <h1>Away Team </h1>
+      <h1>{props.awayTeamName}</h1>
       </div>
     );
   }
