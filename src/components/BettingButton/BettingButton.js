@@ -1,25 +1,25 @@
-import React from "react";
-import "./BettingButton.css";
+import React from 'react';
+import { handlePostRequest } from '../../logic';
+import './BettingButton.css';
 
-
-function BettingButton(props) {
-    
-    function handleClick(){
-        let nextGameNumber = props.currGameNumber + 1;
-        if(nextGameNumber > 3){
-            props.swapGame(0);
-        }
-        else{
-            props.swapGame(nextGameNumber);
-        }
-    }  
+const BettingButton = ({ currGameNumber, swapGame, team, odds }) => {
+  const handleClick = () => {
+    let nextGameNumber = currGameNumber + 1;
+    if (nextGameNumber > 3) {
+      swapGame(0);
+    } else {
+      swapGame(nextGameNumber);
+    }
+    const res = handlePostRequest('http://localhost:3001/api/bets', team);
+    console.log(res);
+  };
 
   return (
     <button className="betting-button" onClick={handleClick}>
-        <span>{props.team}</span>
-        <span>{props.odds}</span>
+      <span>{team}</span>
+      <span>+{odds}</span>
     </button>
   );
-}
+};
 
 export default BettingButton;

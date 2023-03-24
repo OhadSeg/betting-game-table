@@ -1,26 +1,22 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin-top: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-image {
+  transition: transform 250ms;
+  width: 20rem;
+}
+
+.logo-image:hover {
+  transform: translateY(-10px);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
   }
-  
-  .img-container1 {
-    margin: 0 20px;
+
+  .img-container2 {
   }
-  
-  img {
-    height: 200px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-    
-    .img-container2 {
-      margin: 20px 0;
-    }
-  }
-  
+}

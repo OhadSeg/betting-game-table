@@ -1,17 +1,13 @@
-import React from "react";
-import "./MainMatch.css";
-import MatchDetails from "../MatchDetails/MatchDetails";
+import React from 'react';
+import './MainMatch.css';
+import MatchDetails from '../MatchDetails/MatchDetails';
 
 function MainMatch(props) {
   return (
     <div className="container">
-      <div className="img-container1">
-        <img src={props.info.homeImg} alt="homeTeam" />
-      </div>
+      <img className="logo-image" src={props.info.homeImg} alt="homeTeam" />
       <MatchDetails homeTeamName={props.info.data.homeName} awayTeamName={props.info.data.awayName} />
-      <div className="img-container2">
-        <img src={props.info.awayImg} alt="awayTeam" />
-      </div>
+      <img className="logo-image" src={props.info.awayImg} alt="awayTeam" />
     </div>
   );
 }
