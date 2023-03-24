@@ -2,7 +2,7 @@ import React from 'react';
 import './MainMatch.css';
 import MatchDetails from '../MatchDetails/MatchDetails';
 
-function MainMatch(props) {
+const MainMatch = (props) =>{
   return (
     <div className="container">
       <img className="logo-image" src={props.info.homeImg} alt="homeTeam" />

@@ -1,7 +1,7 @@
 import React from 'react';
 import './MatchDetails.css';
 
-function MatchDetails({homeTeamName,awayTeamName}) {
+const MatchDetails = ({homeTeamName,awayTeamName}) => {
   return (
     <div className="main">
       <h1 style={{ color: 'white' }}>{homeTeamName}</h1>

@@ -2,7 +2,7 @@ import React from "react";
 import "./BettingButtons.css";
 import BettingButton from "../BettingButton/BettingButton";
 
-function BettingButtons({currGameNumber, swapGame, bettingStats}) {
+const BettingButtons = ({currGameNumber, swapGame, bettingStats}) => {
   return (
     <div className="betting-buttons-container">
       <BettingButton team={bettingStats.homeName} odds={bettingStats.homeOdds} swapGame={swapGame} currGameNumber={currGameNumber}/>
