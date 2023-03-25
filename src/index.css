@@ -6,16 +6,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./assets/desktop.png');
   background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 125vh;
+  height: 100vh;
 }
 
+/* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
   body {
     background-image: url('./assets/mobile.png');
-    
   }
 }
 
