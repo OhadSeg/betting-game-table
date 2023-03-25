@@ -9,3 +9,17 @@
   margin-left: 24px;
   margin-right: 24px;
 }
+
+@media screen and (max-width: 400px) {
+  
+  .betting-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .betting-buttons-margin {
+   margin-bottom: 30px;
+  }
+  
+}

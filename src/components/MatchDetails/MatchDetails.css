@@ -2,3 +2,15 @@
     margin-left: 15rem;
     margin-right: 15rem;
 }
+
+@media screen and (max-width: 400px) {
+    .main{
+            
+    }
+
+    h1{
+        font-size: large;
+    }
+    
+   
+  }

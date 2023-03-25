@@ -12,10 +12,10 @@ body {
   height: 125vh;
 }
 
-/* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 400px) {
   body {
     background-image: url('./assets/mobile.png');
+    
   }
 }
 

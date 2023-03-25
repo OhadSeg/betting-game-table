@@ -40,3 +40,12 @@
 .button-section{
   margin-top: 8rem;
 }
+
+
+@media screen and (max-width: 400px) {
+  
+.App{
+  
+}
+  
+}
